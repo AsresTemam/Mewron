@@ -100,7 +100,7 @@ html {
   display: inline-block;
 }
 
-.section-title::after {
+/* .section-title::after {
   content: '';
   position: absolute;
   bottom: -10px;
@@ -108,7 +108,7 @@ html {
   width: 60px;
   height: 3px;
   background-color: #0066ff;
-}
+} */
 
 .feature-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
