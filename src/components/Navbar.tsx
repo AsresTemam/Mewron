@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo2.jpg';
 
 interface NavbarProps {
   scrolled: boolean;
@@ -17,9 +17,13 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
           <img
   src={logo}
   alt="Mewron LLC Logo"
-  className="w-10 h-10 md:w-12 md:h-12 rounded-full shadow-lg"
-  style={{ boxShadow: '0 2px 10px rgba(0,0,0,0.13)' }}
+  className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-lg"
+  style={{
+    backgroundColor: 'transparent',
+    boxShadow: '0 4px 15px rgba(0,0,0,0.13)',
+  }}
 />
+
         </div>
         <a
           href="#"
