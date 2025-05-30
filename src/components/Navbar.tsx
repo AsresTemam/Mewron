@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo2.jpg';
+import logo from '../assets/logo3.png'; // Must be PNG with transparency
 import ThemeToggle from './ThemeToggle';
 
 interface NavbarProps {
@@ -12,29 +12,17 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
       className={`fixed top-0 left-0 w-full z-20 px-4 py-4 flex justify-between items-start transition-all duration-300
       ${scrolled ? 'bg-white text-black shadow-md' : 'bg-black bg-opacity-40 text-white dark:bg-gray-900 dark:text-white'}`}
     >
-      {/* Left Section: Logo + Company Name */}
-      <div className="flex flex-col items-start space-y-1">
-        <div className="w-full flex justify-center">
-          <img
-            src={logo}
-            alt="Mewron LLC Logo"
-            className="w-16 h-16 md:w-20 md:h-20 rounded-full shadow-lg"
-            style={{
-              backgroundColor: 'transparent',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.13)',
-            }}
-          />
-        </div>
-        <a
-          href="#"
-          className="text-xl md:text-2xl font-extrabold tracking-wide drop-shadow-sm mt-1"
-        >
-          Mewron LLC - Corporate Philosophy
-        </a>
+      {/* Logo Only */}
+      <div className="flex items-center">
+        <img
+          src={logo}
+          alt="Mewron LLC Logo"
+          className="w-65 md:w-72 h-auto"
+        />
       </div>
 
       {/* Right Section: Navigation Links + Theme Toggle */}
-      <div className="hidden md:flex items-center space-x-6 pt-2 text-base md:text-lg font-medium">
+      <div className="hidden md:flex items-center space-x-6 pt-2 text-base md:text-lg font-medium ml-auto">
         <a href="#features" className="hover:text-primary transition-colors">Features</a>
         <a href="#download" className="hover:text-primary transition-colors">Download</a>
         <a href="#about" className="hover:text-primary transition-colors">About</a>
@@ -46,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
       </div>
 
       {/* Mobile: Theme Toggle + Menu Button */}
-      <div className="md:hidden flex items-center space-x-3">
+      <div className="md:hidden flex items-center space-x-3 ml-auto">
         <ThemeToggle />
         <button className="text-primary">
           <svg

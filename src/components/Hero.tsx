@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import heroBackground0 from '../assets/logo4.jpg';
 import heroBackground1 from '../assets/bg1.jpg';
 import heroBackground2 from '../assets/bg6.jpg';
 import heroBackground3 from '../assets/bg3.jpg';
@@ -11,6 +12,7 @@ const Hero: React.FC = () => {
   const [fade, setFade] = useState(true);
 
   const backgrounds = [
+    heroBackground0,
     heroBackground1,
     heroBackground2,
     heroBackground3,
@@ -31,7 +33,7 @@ const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, [backgrounds.length, currentSlide]);
 
-  const formatSlideNumber = (n: number) => n < 9 ? `0${n + 1}` : `${n + 1}`;
+  const formatSlideNumber = (n: number) => (n < 9 ? `0${n + 1}` : `${n + 1}`);
 
   return (
     <section 
@@ -43,15 +45,25 @@ const Hero: React.FC = () => {
         {backgrounds.map((bg, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${
+            className={`absolute inset-0 w-full h-full flex items-center justify-center transition-opacity duration-1000 ease-in-out ${
               currentSlide === index ? 'opacity-100' : 'opacity-0'
             }`}
             style={{
-              backgroundImage: `url(${bg})`,
+              backgroundImage: index !== 0 ? `url(${bg})` : undefined,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
             }}
-          />
+          >
+            {index === 0 && (
+              <img
+                src={bg}
+                alt="Logo Slide"
+                className="w-64 md:w-80 h-auto"
+                style={{ objectFit: 'contain' }}
+              />
+            )}
+          </div>
         ))}
       </div>
 
