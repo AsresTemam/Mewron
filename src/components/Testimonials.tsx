@@ -12,13 +12,13 @@ const testimonials = [
     image: testimonial1
   },
   {
-    name: "Abigail ",
+    name: "Abigail Asres",
     role: "Cat Parent",
     text: "I've tried several pet apps before, but none compare...",
     image: testimonial2
   },
   {
-    name: "Melos",
+    name: "Melos Asres",
     role: "Multi-pet Household",
     text: "Managing care for multiple pets used to be overwhelming...",
     image: testimonial3
