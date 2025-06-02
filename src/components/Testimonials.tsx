@@ -42,7 +42,7 @@ const Testimonials: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold text-black dark:text-white">What Pet Parents Say</h2>
+          <h2 className="text-4xl font-bold text-black dark:text-white">What Pet Parents Say</h2>
           <p className="text-lg max-w-3xl mx-auto mt-4">Hear from our community of pet parents who have transformed their pet care experience with our app.</p>
         </motion.div>
 
@@ -52,18 +52,18 @@ const Testimonials: React.FC = () => {
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              transition={{ delay: i * 0.15, duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow hover:shadow-lg transition-shadow duration-300"
+              className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md hover:shadow-xl transition-shadow duration-300"
             >
               <div className="flex items-center mb-4">
-                <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full mr-4 object-cover" />
+                <img src={testimonial.image} alt={testimonial.name} className="w-14 h-14 rounded-full mr-4 object-cover border-2 border-blue-500" />
                 <div>
                   <h4 className="font-bold text-black dark:text-white">{testimonial.name}</h4>
                   <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="mb-4 italic">“{testimonial.text}”</p>
+              <p className="mb-4 italic text-gray-700 dark:text-gray-300">“{testimonial.text}”</p>
               <div className="flex text-yellow-400">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <svg key={index} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -80,13 +80,19 @@ const Testimonials: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
           viewport={{ once: true }}
-          className="statistics mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
+          className="statistics mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 text-center"
         >
           {stats.map((stat, i) => (
-            <div key={i}>
+            <motion.div
+              key={i}
+              initial={{ scale: 0.9 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className="rounded-xl bg-white dark:bg-gray-800 p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
               <div className="text-4xl font-bold text-[#0066ff] dark:text-blue-400 mb-2">{stat.value}</div>
               <p className="text-gray-600 dark:text-gray-300">{stat.label}</p>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>
