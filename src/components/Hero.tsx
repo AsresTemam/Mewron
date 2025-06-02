@@ -47,21 +47,12 @@ const Hero: React.FC = () => {
               currentSlide === index ? 'opacity-100' : 'opacity-0'
             }`}
             style={{
-              backgroundImage: index !== 0 ? `url(${bg})` : undefined,
+              backgroundImage: `url(${bg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
-          >
-            {index === 0 && (
-              <img
-                src={bg}
-                alt="Logo Slide"
-                className="w-64 md:w-80 h-auto"
-                style={{ objectFit: 'contain' }}
-              />
-            )}
-          </div>
+          />
         ))}
       </div>
 
