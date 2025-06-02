@@ -1,4 +1,11 @@
 import React from 'react';
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from 'react-icons/fa';
 
 const Support: React.FC = () => {
   return (
@@ -8,7 +15,7 @@ const Support: React.FC = () => {
           <h2 className="section-title text-center text-black dark:text-white">Support & Contact</h2>
           <p className="text-lg max-w-3xl mx-auto">Need help or have feedback? Our team is here to assist you.</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="contact-method space-y-6">
@@ -26,21 +33,21 @@ const Support: React.FC = () => {
             </div>
             <div>
               <h4 className="text-xl font-bold mb-2 text-black dark:text-white">Follow Us</h4>
-              <div className="social-links flex space-x-4 text-primary dark:text-blue-400">
-                <a href="#" aria-label="Twitter">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="..." />
-                  </svg>
+              <div className="flex space-x-4">
+                <a href="https://twitter.com/mewron" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className="text-blue-500 hover:text-blue-700 transition-colors">
+                  <FaTwitter size={24} />
                 </a>
-                <a href="#" aria-label="Facebook">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="..." />
-                  </svg>
+                <a href="https://facebook.com/mewron" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-blue-700 hover:text-blue-900 transition-colors">
+                  <FaFacebookF size={24} />
                 </a>
-                <a href="#" aria-label="Instagram">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="..." />
-                  </svg>
+                <a href="https://instagram.com/mewron" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-pink-500 hover:text-pink-700 transition-colors">
+                  <FaInstagram size={24} />
+                </a>
+                <a href="https://linkedin.com/company/mewron" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-blue-600 hover:text-blue-800 transition-colors">
+                  <FaLinkedinIn size={24} />
+                </a>
+                <a href="https://youtube.com/mewron" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-red-600 hover:text-red-800 transition-colors">
+                  <FaYoutube size={24} />
                 </a>
               </div>
             </div>
