@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import heroBackground0 from '../assets/logo4.jpg';
 import heroBackground1 from '../assets/bg1.jpg';
 import heroBackground2 from '../assets/bg6.jpg';
 import heroBackground3 from '../assets/bg3.jpg';
@@ -12,7 +11,6 @@ const Hero: React.FC = () => {
   const [fade, setFade] = useState(true);
 
   const backgrounds = [
-    heroBackground0,
     heroBackground1,
     heroBackground2,
     heroBackground3,
