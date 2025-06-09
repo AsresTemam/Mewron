@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  FaTwitter,
   FaFacebookF,
   FaInstagram,
   FaLinkedin,
@@ -8,6 +7,7 @@ import {
   FaApple,
   FaGooglePlay,
 } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6'; // NEW X icon import
 
 const Footer: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               Helping pet parents provide the best care through technology. Join thousands of pet lovers building digital legacies for their beloved companions.
             </p>
             <div className="flex space-x-4">
-              <a href="https://twitter.com/mewron" aria-label="Twitter" className="hover:text-white text-blue-100 transition-colors"><FaTwitter size={20} /></a>
+              <a href="https://x.com/Mewron_official" aria-label="Twitter" className="hover:text-white text-blue-100 transition-colors"><FaXTwitter size={20} /></a>
               <a href="https://facebook.com/mewron" aria-label="Facebook" className="hover:text-white text-blue-100 transition-colors"><FaFacebookF size={20} /></a>
               <a href="https://instagram.com/mewron" aria-label="Instagram" className="hover:text-white text-blue-100 transition-colors"><FaInstagram size={20} /></a>
               <a href="https://instagram.com/mewron" aria-label="Instagram" className="hover:text-white text-blue-100 transition-colors"><FaLinkedin size={20} /></a>
