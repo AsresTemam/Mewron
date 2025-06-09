@@ -1,14 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  FaTwitter,
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaYoutube,
 } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Support: React.FC = () => {
+  const socialLinks = [
+    { icon: FaXTwitter, url: 'https://x.com/Mewron_official', label: 'X' },
+    { icon: FaFacebookF, url: 'https://facebook.com/mewron', label: 'Facebook' },
+    { icon: FaInstagram, url: 'https://instagram.com/mewron', label: 'Instagram' },
+    { icon: FaLinkedinIn, url: 'https://linkedin.com/in/mewron', label: 'LinkedIn' },
+    { icon: FaYoutube, url: 'https://youtube.com/mewron', label: 'YouTube' },
+  ];
+
   return (
     <section id="support" className="section-padding bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300">
       <div className="container mx-auto px-4">
@@ -31,28 +39,29 @@ const Support: React.FC = () => {
           >
             <div>
               <h4 className="text-xl font-bold mb-2 text-black dark:text-white">Customer Support</h4>
-              <p>Email us at <a href="mailto:support@mewron.com" className="text-blue-600 hover:underline">support@mewron.com</a></p>
+              <p>Email us at <a href="mailto:support@mewron.com" className="text-blue-600 hover:underline">support@mewron.jp</a></p>
             </div>
             <div>
               <h4 className="text-xl font-bold mb-2 text-black dark:text-white">Business Inquiries</h4>
-              <p>For partnerships and media: <a href="mailto:info@mewron.com" className="text-blue-600 hover:underline">info@mewron.com</a></p>
+              <p>For partnerships and media: <a href="mailto:info@mewron.com" className="text-blue-600 hover:underline">info@mewron.jp</a></p>
             </div>
             <div>
               <h4 className="text-xl font-bold mb-2 text-black dark:text-white">Head Office</h4>
-              <p>Mewron Inc., 1234 Pet Lane, Tokyo, Japan</p>
+              <p>1-33-25-202, Sagamigaoka, Zama-Shi, Kanagawa, Japan</p>
             </div>
             <div>
               <h4 className="text-xl font-bold mb-2 text-black dark:text-white">Follow Us</h4>
               <div className="flex space-x-4">
-                {[FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube].map((Icon, idx) => (
+                {socialLinks.map(({ icon: Icon, url, label }, idx) => (
                   <motion.a
                     key={idx}
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.95 }}
-                    href="#"
+                    href={url}
+                    aria-label={label}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="transition-colors"
+                    className="transition-colors hover:text-blue-600 dark:hover:text-white"
                   >
                     <Icon size={24} />
                   </motion.a>

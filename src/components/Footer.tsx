@@ -7,7 +7,7 @@ import {
   FaApple,
   FaGooglePlay,
 } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6'; // NEW X icon import
+import { FaXTwitter } from 'react-icons/fa6';
 
 const Footer: React.FC = () => {
   return (
